@@ -57,18 +57,14 @@ void convert (double temp, char type) {
 }
 
 
-int main(int argc, char *argv[])
+int main()
 {
 	char type;
 	int a;
-    if (argc == 2) {
-        a = *argv[1];
-        convert(a, 'f');
+    scanf("%d  %c", &a, &type);
+    if (type == '\n'){
         convert(a, 'c');
+        convert(a, 'f');
         convert(a, 'k');
-    } else {
-        a = *argv[1];
-        type = *argv[2];
-	    convert(a, type);
-    }
+    } else{convert(a, type);}
 }
