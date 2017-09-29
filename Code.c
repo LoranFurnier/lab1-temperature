@@ -61,8 +61,8 @@ int main()
 {
 	char type;
 	int a;
-    scanf("%d  %c", &a, &type);
-    if (type == '\n'){
+    scanf("%d", &a); scanf('%c', &type);
+    if (type == feof){
         convert(a, 'c');
         convert(a, 'f');
         convert(a, 'k');
