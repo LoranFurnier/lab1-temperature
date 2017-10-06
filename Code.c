@@ -69,8 +69,8 @@ void convert(double temp, char type)
 
 }
 
-
-int main(int argc, char *argv[])
+/*
+int main()
 {
 	char s[50], type;
 	char *p;
@@ -78,4 +78,9 @@ int main(int argc, char *argv[])
 	p = gets(s);
 	sscanf(s, "%f %c", &temp, &type);
 	convert(temp, type);
+}
+*/
+
+int main(int argc, char *argv[]){
+	
 }
