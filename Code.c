@@ -91,7 +91,6 @@ int main(int argc, char *argv[]){
         type = argv [2][1];
         convert(temp,type);
     }
-	
-    return 0;
     printf("\nthat's how it works, i guess...");
+	return 0;
 }
