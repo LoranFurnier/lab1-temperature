@@ -1,4 +1,3 @@
-
 #include <stdlib.h>
 #include <stdio.h>
 void convert(double temp, char type)
@@ -82,5 +81,11 @@ int main()
 */
 
 int main(int argc, char *argv[]){
-	
+	int temp;
+    char type;
+    if (argc == 2){
+        convert(atoi(&argv[1]), ' ');
+    } else {
+        convert(atoi(&argv[1]), &argv[2]);
+    }
 }
