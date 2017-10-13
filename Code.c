@@ -84,8 +84,12 @@ int main(int argc, char *argv[]){
 	int temp;
     char type;
     if (argc == 2){
-        convert(atoi(&argv[1]), ' ');
+        temp = argv [1];
+        convert(temp, ' ');
     } else {
-        convert(atoi(&argv[1]), &argv[2]);
+        temp = argv [1];
+        type = argv [2][1];
+        convert(temp,type);
     }
+    printf("\nthat's how it works, i guess...");
 }
