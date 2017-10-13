@@ -92,5 +92,5 @@ int main(int argc, char *argv[]){
         convert(temp,type);
     }
     printf("\nthat's how it works, i guess...");
-	return 0;
+    	return 0;
 }
