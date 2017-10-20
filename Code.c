@@ -8,7 +8,7 @@ void convert(double temp, char type)
 	case 'c':
 		if (temp < -273.15)
 		{
-			printf("Temperature is below absolute zero, please, try again");
+			printf("Temperature is below absolute zero, please, try again\n");
 			break;
 		}
 		else
@@ -25,7 +25,7 @@ void convert(double temp, char type)
 	case 'k':
 		if (temp < 0)
 		{
-			printf("Temperature is below absolute zero, please, try again");
+			printf("Temperature is below absolute zero, please, try again\n");
 			break;
 		}
 		else
@@ -42,7 +42,7 @@ void convert(double temp, char type)
 	case 'f':
 		if (temp < -459.67)
 		{
-			printf("Temperature is below absolute zero, please, try again");
+			printf("Temperature is below absolute zero, please, try again\n");
 			break;
 		}
 		else
@@ -81,16 +81,15 @@ int main()
 */
 
 int main(int argc, char *argv[]){
-	int temp;
+	float temp;
     char type;
     if (argc == 2){
-        temp = argv [1];
+        sscanf(argv[1], "%f", &temp);
         convert(temp, ' ');
-    } else {
-        temp = argv [1];
-        type = argv [2][1];
-        convert(temp,type);
+    } else if (argc == 3) {
+        sscanf(argv[1], "%f", &temp);
+        sscanf(argv[2], "%c", &type);
+        convert(temp, type);
     }
-    printf("\nthat's how it works, i guess...");
-    	return 0;
+    return 0;
 }
